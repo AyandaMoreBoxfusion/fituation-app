@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=Comfortaa:wght@300&display=swap');
+.pic {
+    width: 100px;
+    height: 100px;
+}
+
+.landing {
+    /*background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-national-fitness-day-flat-wind-seaside-yoga-banner-poster-image_195526.jpg');*/
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 50px;
+    padding: 10px;
+}
+
+.featuresContainer {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.features {
+    background-color: #bcccc8;
+    padding: 20 px;
+    margin: 10px;
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
