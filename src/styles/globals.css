@@ -5,11 +5,22 @@ html,
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 body {
     font-family: 'Chivo';
     background-color: whitesmoke;
+    background-image: linear-gradient(rgba(67, 64, 64, 0.527), rgba(0, 0, 0, 0.5)), url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjY3LW51bm55LTA0Yi5qcGc.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a {

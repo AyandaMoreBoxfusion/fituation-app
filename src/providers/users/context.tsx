@@ -1,22 +1,35 @@
+import { UserInfo } from 'os';
 import { createContext } from 'react';
-
 
 //A.K.A The object for the user in my db
 export interface INewUser {
-    Name: string,
-    Email: string,
-    Password: string,
-}
+    name: string,
+    email: string,
+    password: string,
+    roleName: string[]}
 
 export interface IUser {
-    Email: string,
-    Password: string  
+    email: string,
+    password: string  
 }
+
+export interface IUserInfo {
+    email: string,
+    id: string,
+    name: string,
+    password: string,
+    roleNames: string[],
+    userId: number
+}
+
 
 ///What must be returned
 export interface IUserStateContext {
     readonly UserCreated?: INewUser;
-    readonly UserLogin?: IUser;
+    readonly AccessToken?: string;
+    readonly UserInfo?: IUserInfo;
+    readonly UserRole?: string;
+    readonly AllUsers?: IUserInfo[];
 } 
 
 export const INITIAL_STATE: IUserStateContext = {};
@@ -25,6 +38,9 @@ export const INITIAL_STATE: IUserStateContext = {};
 export interface IUserActionContext {
     createUser?: (payload: INewUser) => void;
     loginUser?:(payload: IUser) => void;
+    getUserInfo?:(payload: IUser) => void;
+    getUserRole?:(payload: number) => void;
+    getAllUsers?:() => void;
 }
 
 const UserContext = createContext<IUserStateContext>(INITIAL_STATE);

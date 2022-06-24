@@ -1,0 +1,29 @@
+.statsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    background-color: #bcccc8;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic {
+    width: 100px;
+    height: 100px;
+}
+
+.videoDiv {
+    display: grid;
+    grid-template-columns: 60% 66%;
+    padding: 15px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}

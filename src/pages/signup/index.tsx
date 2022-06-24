@@ -5,6 +5,10 @@ import { useUser } from '../../providers/users';
 import { INewUser } from '../../providers/users/context';
 import styles from './styles.module.scss';
 import {useRouter} from 'next/router';
+import Nav from '../../components/Nav/Nav';
+import Title from 'antd/lib/typography/Title';
+import { HeartOutlined } from '@ant-design/icons';
+import Link from 'next/link';
 
 const SignUp: FC = () => {
     const { createUser, UserCreated } = useUser();
@@ -12,29 +16,26 @@ const SignUp: FC = () => {
 
     useEffect(() => {
       if (UserCreated != null) {
-        console.log(UserCreated);
+        console.log('created-----------------',UserCreated);
+        
       }
     }, [UserCreated])
+    
 
     const onFinish = (values: INewUser) => {
       console.log(values);
-      if (createUser){
-        createUser(values);
-         push('/user')
-      } else { 
-        alert("Please re-enter your values");
+      
       }
-      }
-
-    
-    
       const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo);
       };
       
       
   return (
+    <>
+    <Nav />
       <div className={styles.container}>
+      <Title style={{margin: 10, paddingLeft: 170}}> join us <HeartOutlined /> </Title>
         <Form
           name="basic"
           labelCol={{ span: 8 }}
@@ -64,22 +65,23 @@ const SignUp: FC = () => {
             name="password"
             rules={[{ required: true, message: 'Please input your password!' }]}
           >
-            <Input.Password />
+            <Input.Password required style={{border: 'none',
+            boxSizing: 'border-box',
+            borderBottom: '2px solid rgb(14, 13, 13)',
+            backgroundColor: '#bcccc8'}}/>
           </Form.Item>
-
-    
-          
-    
           <Form.Item wrapperCol={{ offset: 5, span: 16 }}>
-            
             <Button type="primary" htmlType="submit">
-              Submit
+              Sign Up
             </Button>
-          
+            <Link href="/login">
+            <a style={{paddingLeft: 20}}>already registered?</a>
+          </Link>
             
           </Form.Item>
         </Form>
       </div>
+      </>
       );
 }
 

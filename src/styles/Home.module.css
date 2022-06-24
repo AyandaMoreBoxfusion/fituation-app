@@ -7,27 +7,28 @@
 .landing {
     /*background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-national-fitness-day-flat-wind-seaside-yoga-banner-poster-image_195526.jpg');*/
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 50px;
+    margin: 60px;
     padding: 10px;
 }
 
 .featuresContainer {
     display: flex;
-    padding: 10px;
-    margin: 10px;
-    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    justify-content: space-evenly;
+    margin-top: 80px;
 }
 
 .features {
     background-color: #bcccc8;
-    padding: 20 px;
-    margin: 10px;
+    padding: 20px;
+    margin: 40px;
     border-radius: 15px;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: center;

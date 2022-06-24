@@ -7,6 +7,9 @@ export function UserReducer(incomingState: IUserStateContext, action: ReduxActio
     switch(type) {
         case UserActionEnum.CreateUserRequest:
         case UserActionEnum.LoginUserRequest:
+        case UserActionEnum.GetUserInfo:
+        case UserActionEnum.GetUserRole:
+        case UserActionEnum.GetAllUsersRequest:
                 return {...incomingState, ...payload}
         default:
                 return incomingState;

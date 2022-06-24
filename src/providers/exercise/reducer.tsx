@@ -6,10 +6,11 @@ export function ExerciseReducer(incomingState: IExerciseStateContext, action: Re
 
     switch(type) {
         case ExerciseActionEnum.CreateExerciseRequest: 
+        case ExerciseActionEnum.GetExerciseRequest:
+        case ExerciseActionEnum.GetFavouriteExerciseRequest: 
+        case ExerciseActionEnum.FetchFavouriteExerciseRequest:   
             return {...incomingState, ...payload}
         default:
             return incomingState;
-
-            
     }
 }

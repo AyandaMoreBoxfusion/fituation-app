@@ -1,3 +1,4 @@
+import Title from 'antd/lib/typography/Title'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -12,9 +13,9 @@ const Home: NextPage = () => {
       <>
       <Nav />
     <div className={styles.landing}>
-        <h1>Hello, welcome to Fituation! </h1>
-        <p> Want to take care of your physical health, but don't know where to start? </p>
-           <p> Fituation is here to make that easier for you with 3, simple steps.
+        <Title style={{color: 'white'}}>Hello, welcome to Fituation! </Title>
+        <p style={{color: 'white'}}> Want to take care of your physical health, but don't know where to start? </p>
+           <p style={{color: 'white'}}> Fituation is here to make that easier for you!
         </p>
         <div className={styles.featuresContainer}>
            <div className={styles.features}>

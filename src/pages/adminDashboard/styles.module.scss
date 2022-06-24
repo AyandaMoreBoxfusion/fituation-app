@@ -1,0 +1,20 @@
+.statsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    background-color: #bcccc8;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic {
+    width: 100px;
+    height: 100px;
+}
